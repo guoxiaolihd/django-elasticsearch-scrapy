@@ -29,6 +29,10 @@
 </body>
 <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
 <script type="text/javascript">
-
+    let search_url = "{% url 'result' %}"
+    function add_search(){
+        let val = $(".searchInput").val()
+        window.location.href=search_url+'?q='+val
+    }
 </script>
 </html>
