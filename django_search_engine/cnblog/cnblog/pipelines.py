@@ -10,4 +10,5 @@ from itemadapter import ItemAdapter
 
 class CnblogPipeline:
     def process_item(self, item, spider):
+        item.save_to_es()
         return item
